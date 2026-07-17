@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Ulang Tahun Utichu 🎉</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+}
+
+h1{
+color:white;
+margin-bottom:30px;
+text-shadow:2px 2px 8px rgba(0,0,0,.2);
+font-size:38px;
+}
+
+.subtitle{
+color:white;
+margin-top:-15px;
+margin-bottom:40px;
+}
+
+.envelope{
+width:240px;
+height:160px;
+background:#ff6b81;
+margin:auto;
+position:relative;
+cursor:pointer;
+transition:.4s;
+border-radius:0 0 10px 10px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.envelope:hover{
+transform:scale(1.05);
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+top:-80px;
+left:0;
+border-left:120px solid transparent;
+border-right:120px solid transparent;
+border-bottom:80px solid #ff8fa3;
+}
+
+.envelope:after{
+content:"💌";
+position:absolute;
+font-size:45px;
+top:55px;
+left:95px;
+}
+
+.card{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%) scale(0);
+width:90%;
+max-width:650px;
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+transition:.5s;
+overflow:auto;
+max-height:80vh;
+}
+
+.card.show{
+transform:translate(-50%,-50%) scale(1);
+}
+
+.card h2{
+color:#ff4d6d;
+margin-bottom:20px;
+}
+
+.card p{
+line-height:1.8;
+font-size:17px;
+color:#444;
+text-align:justify;
+}
+
+.close{
+margin-top:25px;
+padding:12px 25px;
+background:#ff4d6d;
+border:none;
+color:white;
+font-size:16px;
+border-radius:30px;
+cursor:pointer;
+}
+
+footer{
+margin-top:25px;
+color:#999;
+font-size:14px;
+}
+
+.floating{
+position:absolute;
+font-size:28px;
+animation:float 8s linear infinite;
+opacity:.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="floating" style="left:8%;animation-delay:0s;">🎈</div>
+<div class="floating" style="left:22%;animation-delay:2s;">💖</div>
+<div class="floating" style="left:40%;animation-delay:4s;">🎉</div>
+<div class="floating" style="left:60%;animation-delay:1s;">✨</div>
+<div class="floating" style="left:80%;animation-delay:3s;">🎂</div>
+<div class="floating" style="left:93%;animation-delay:5s;">🌸</div>
+
+<div class="container">
+
+<h1>🎂 Selamat Ulang Tahun 🎂</h1>
+<div class="subtitle">
+Untuk <b>Utichu</b> yang ke-19 Tahun 💕
+</div>
+
+<div class="envelope" onclick="openLetter()"></div>
+
+<p style="margin-top:25px;color:white;">
+Klik suratnya ya 💌
+</p>
+
+</div>
+
+<div class="card" id="letter">
+
+<h2>💖 Happy 19th Birthday, Utichu 💖</h2>
+
+<p>
+
+Selamat ulang tahun yang ke-19, Utichu! 🎉
+
+Hari ini adalah hari yang sangat spesial karena tepat di hari ini kamu bertambah usia dan melangkah ke babak baru dalam hidupmu.
+
+Semoga di usia yang ke-19 ini kamu selalu diberikan kesehatan, kebahagiaan, rezeki yang melimpah, dimudahkan dalam setiap langkah, dan dipertemukan dengan orang-orang baik yang selalu mendukungmu.
+
+Jangan pernah takut mengejar mimpi. Tidak apa-apa jika jalannya terasa lambat, karena setiap proses akan membawamu menjadi pribadi yang lebih kuat dan lebih hebat.
+
+Tetaplah menjadi seseorang yang baik hati, murah senyum, dan selalu membawa kebahagiaan bagi orang-orang di sekitarmu.
+
+Terima kasih sudah menjadi dirimu sendiri.
+
+Semoga setiap doa yang kamu panjatkan perlahan satu per satu dikabulkan oleh Tuhan.
+
+Semoga tahun ini menjadi tahun terbaik yang pernah kamu jalani.
+
+Teruslah bersinar seperti bintang, karena kamu pantas mendapatkan semua hal baik di dunia ini.
+
+✨ Selamat ulang tahun yang ke-19, Utichu.
+Semoga kebahagiaan selalu menyertaimu hari ini, esok, dan seterusnya.
+
+🎂 Happy Birthday! 🎂
+
+</p>
+
+<button class="close" onclick="closeLetter()">
+Tutup Surat
+</button>
+
+<footer>
+Dibuat dengan ❤️ khusus untuk Utichu
+</footer>
+
+</div>
+
+<script>
+
+function openLetter(){
+document.getElementById("letter").classList.add("show");
+}
+
+function closeLetter(){
+document.getElementById("letter").classList.remove("show");
+}
+
+</script>
+
+</body>
+</html>
